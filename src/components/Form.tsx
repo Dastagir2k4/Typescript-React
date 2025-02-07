@@ -37,7 +37,8 @@ const Form: React.FC = () => {
 
   return (
     <div>
-      <div className='flex flex-col bg-gray-600 p-4 m-4 text-white w-1/2 gap-5'>
+      <h1 className='text-3xl text-center py-5'>Blog Form</h1>
+      <div className='flex flex-col bg-gray-600 p-4 m-4 text-white w-1/2 gap-5 mx-auto'>
         <input
           type="text"
           name="title"
@@ -57,8 +58,8 @@ const Form: React.FC = () => {
         />
       
         <button onClick={handleSubmit} className='bg-white text-black rounded-lg cursor-pointer'>Submit</button>
-      </div>
-      <h1>Your Details</h1>
+      <div className=' flex flex-col gap-5 bg-slate-500'>
+      <h1 className='text-center text-2xl'>Your Details</h1>
       <div>
         { dataList &&  dataList.map((data, index) => (
           <div key={index} className='flex flex-col bg-gray-600 p-4 m-4 text-white w-1/2' >
@@ -66,6 +67,8 @@ const Form: React.FC = () => {
             <p>Description : {data.desc}</p>
           </div>
         ))}
+      </div>
+      </div>
       </div>
     </div>
   );
